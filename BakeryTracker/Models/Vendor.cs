@@ -16,8 +16,16 @@ namespace BakeryTracker.Models
 
     public Vendor(string nameOfVendor, string descriptionOfVendor)
     {
-      //constructor for Vendor 
+      Name = nameOfVendor;
+      Description = descriptionOfVendor;
+      _instancesOfVendors.Add(this);
+      VendorId = _instancesOfVendors.Count;
+      VendorOrders = new List<Order>{};
     }
+
+
+      //constructor for Vendor 
+    
 
 
     //class should include properties for the vendor's name, a description of the vendor, a List of Orders belonging to the vendor, and any other properties you would like to include.

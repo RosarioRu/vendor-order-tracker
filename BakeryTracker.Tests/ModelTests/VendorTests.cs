@@ -17,10 +17,8 @@ namespace BakeryTracker.Tests
     public void VendorConstructor_CreateAnInstanceOfVendor_Vendor()
     {
       Vendor newVendor = new Vendor("Rosie's Cafe", "Coffee shop downtown, typically requests muffins.");
-      // Assert.AreEqual(typeof(Vendor), newVendor.GetType());
-      Assert.AreEqual("Rosie's Cafe", newVendor.Name);
-      // Console.WriteLine(newVendor.Name);
-     
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+      Assert.AreEqual("Rosie's Cafe", newVendor.Name);     
     }
 
   }
