@@ -50,5 +50,19 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(orderDate, newOrder.Date);
     }
 
+    [TestMethod]
+    public void RetrieveId_ReturnOrderId_int()
+    {
+      //Arrange
+      Order newOrder = new Order("Birthday Order", "Pie order for Wilson Family bday party", 44.50, "10/01/2021");
+      //Act
+      int orderId = newOrder.OrderId;
+      //Assert
+      Assert.AreEqual(1, orderId);
+    }
+
+
+
+
   }
 }
