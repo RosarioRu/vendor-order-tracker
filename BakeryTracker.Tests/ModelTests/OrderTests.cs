@@ -77,6 +77,19 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(orderTwo, orderFound);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnAllInstancesOfOrders_ListOfOrders()
+    {
+      //Arrange
+      Order firstOrder = new Order("First order title", "First order description", 29.20, "01/10/2022");
+      Order secondOrder = new Order("Second order title", "Second order description", 30, "10/02/2021");
+      List<Order> listWeAddOrdersToManually = new List<Order> {firstOrder, secondOrder};
+      //Act
+      List<Order> ordersListGetAllMethodMakes = Order.GetAll();
+      //Assert
+      CollectionAssert.AreEqual(listWeAddOrdersToManually, ordersListGetAllMethodMakes);
+    }
+
 
 
 
