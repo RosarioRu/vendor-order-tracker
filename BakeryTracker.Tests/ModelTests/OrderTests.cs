@@ -6,8 +6,12 @@ using System;
 namespace BakeryTracker.Tests
 {
   [TestClass]
-  public class OrderTests 
+  public class OrderTests : IDisposable
   {
+    public void Dispose()
+    {
+      Order.EmptyOrderList();
+    }
 
     //some method to clear lists/teardown so tests don't affect each other
 
