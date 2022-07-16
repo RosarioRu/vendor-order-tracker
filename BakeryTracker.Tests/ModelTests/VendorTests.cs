@@ -6,10 +6,12 @@ using System;
 namespace BakeryTracker.Tests
 {
   [TestClass]
-  public class VendorTests
-  // public class VendorTests : IDisposable
+  public class VendorTests : IDisposable
   {
-
+    public void Dispose()
+    {
+      Vendor.EmptyVendorList();
+    }
     //some method to clear lists/teardown so tests don't affect each other
 
     //tests for Vendor class go here

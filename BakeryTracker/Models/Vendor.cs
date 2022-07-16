@@ -25,7 +25,12 @@ namespace BakeryTracker.Models
 
     public static List<Vendor> GetAll()
     {
-      // return _instancesOfVendors;
+      return _instancesOfVendors;
+    }
+
+    public static void EmptyVendorList()
+    {
+      _instancesOfVendors.Clear();
     }
 
   
