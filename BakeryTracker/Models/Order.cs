@@ -34,6 +34,11 @@ namespace BakeryTracker.Models
     {
       return _instancesOfOrders[orderId-1];
     }
+    //method to retrieve list of all instances of Order
+    public static List<Order> GetAll()
+    {
+      return _instancesOfOrders;
+    }
 
 
 //class should include properties for the title, the description, the price, the date, and any other properties you would like to include.
