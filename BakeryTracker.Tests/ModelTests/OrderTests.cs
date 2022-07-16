@@ -65,6 +65,18 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(1, orderId);
     }
 
+    [TestMethod]
+    public void FindOrderByUniqueId_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      Order orderOne = new Order("Order one title", "Order one description", 100, "03/24/2022");
+      Order orderTwo = new Order("Order two title", "Order two description", 200, "01/15/2022");
+      //Act
+      Order orderFound = Order.FindOrder(2);
+      //Assert
+      Assert.AreEqual(orderTwo, orderFound);
+    }
+
 
 
 
