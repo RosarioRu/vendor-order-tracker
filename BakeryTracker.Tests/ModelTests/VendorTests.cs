@@ -78,10 +78,14 @@ namespace BakeryTracker.Tests
     [TestMethod]
     public void AddOrder_AddsOrderToCorrespondingVendor_ListOfOrders()
     {
-      //Need to Create Order Class first to link them!!!
       //Arrange
+      Order newOrder = new Order("new order title", "new order description", 100, "03/24/2022");
+      List<Order> manuallyMadeList = new List<Order> {newOrder};
+      Vendor newVendor = new Vendor("Lulu Tea and Treats", "Tea shop in downtown Seattle.");
       //Act
-      //Assert 
+      newVendor.AddOrder(newOrder);
+      //Assert
+      CollectionAssert.AreEqual(manuallyMadeList, newVendor.VendorOrders);
     }
 
   }
