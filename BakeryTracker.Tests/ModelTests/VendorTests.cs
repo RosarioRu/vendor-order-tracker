@@ -75,5 +75,14 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(vendorOne, foundVendor);
     }
 
+    [TestMethod]
+    public void AddOrder_AddsOrderToCorrespondingVendor_ListOfOrders()
+    {
+      //Need to Create Order Class first to link them!!!
+      //Arrange
+      //Act
+      //Assert
+    }
+
   }
 } 
