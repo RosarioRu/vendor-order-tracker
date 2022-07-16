@@ -32,5 +32,17 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(name, result);
     }
 
+    [TestMethod]
+    public void RetrieveDescription_ReturnVendorDescription_string()
+    {
+      //Arrange
+      string vendorDescription = "A restaurant that serves pancakes and other breakfast fare.";
+      Vendor newVendor = new Vendor("John's Pancakes", vendorDescription);
+      //Act
+      string result = newVendor.Description;
+      //Assert
+      Assert.AreEqual(vendorDescription, result);
+    }
+
   }
 } 
