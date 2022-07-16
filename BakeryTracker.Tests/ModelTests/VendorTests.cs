@@ -44,5 +44,22 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(vendorDescription, result);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnAllInstancesOfVendors_ListOfVendors()
+    {
+      //Arrange
+      string firstName = "Natural Foods";
+      string secondName = "Coffee World";
+      string firstDescription = "Grocery store we usually make baguettes for.";
+      string secondDescription = "Coffee shop in SE we typically make cookies for.";
+      Vendor firstVendor = new Vendor(firstName, firstDescription);
+      Vendor secondVendor = new Vendor(secondName, secondDescription);
+      List<Vendor> listWeAddVendorsToManually = new List<Vendor> {firstVendor, secondVendor};
+      //Act
+      List<Vendor> listGetAllMethodMakes = Vendor.GetAll(); //I'll need to add GetAll() method in Vendor.cs file for this to work!
+      //Assert
+      Assert.AreEqual(listWeAddVendorsToManually, listGetAllMethodMakes);
+    }
+
   }
 } 

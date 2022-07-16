@@ -23,10 +23,12 @@ namespace BakeryTracker.Models
       VendorOrders = new List<Order>{};
     }
 
+    public static List<Vendor> GetAll()
+    {
+      // return _instancesOfVendors;
+    }
 
-      //constructor for Vendor 
-    
-
+  
 
     //class should include properties for the vendor's name, a description of the vendor, a List of Orders belonging to the vendor, and any other properties you would like to include.
 
