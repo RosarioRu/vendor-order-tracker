@@ -34,5 +34,21 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(orderDescription, newOrder.Description);
     }
 
+    [TestMethod]
+    public void RetrievePrice_ReturnOrderPrice_double()
+    {
+      double orderPrice = 112.25;
+      Order newOrder = new Order("Wedding Order", "Cake and cupcake order for the Hawkin's wedding", orderPrice, "12/12/2021");
+      Assert.AreEqual(orderPrice, newOrder.Price);
+    }
+
+    [TestMethod]
+    public void RetrieveDate_ReturnOrderDate_string()
+    {
+      string orderDate = "12/12/2020";
+      Order newOrder = new Order("Wedding Order", "Cake and cupcake order for the Hawkin's wedding", 100.25, orderDate);
+      Assert.AreEqual(orderDate, newOrder.Date);
+    }
+
   }
 }
