@@ -63,5 +63,17 @@ namespace BakeryTracker.Tests
       CollectionAssert.AreEqual(listWeAddVendorsToManually, listGetAllMethodMakes);
     }
 
+    [TestMethod]
+    public void FindVendorByUniqueID_ReturnsCorrectVendor_Vendor()
+    {
+      //Arrange
+      Vendor vendorOne = new Vendor("Natural Foods", "Grocery store in SE PDX");
+      Vendor vendorTwo = new Vendor("Coffee Coffee!", "Coffee shop downtown.");
+      //Act
+      Vendor foundVendor = Vendor.FindVendor(1);
+      //Assert
+      Assert.AreEqual(vendorOne, foundVendor);
+    }
+
   }
 } 
