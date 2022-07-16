@@ -1,5 +1,5 @@
 using System;
-//using System.Collections.Generic; (for lists)
+using System.Collections.Generic; 
 
 
 namespace BakeryTracker.Models
@@ -8,12 +8,12 @@ namespace BakeryTracker.Models
   {
     public string Title { get; set; }
     public string Description { get; set; }
-    public int Price { get; set}
-    public string Date { get; set}
+    public double Price { get; set;}
+    public string Date { get; set;}
     public int OrderId { get; }
     private static List<Order> _instancesOfOrders = new List<Order> {};
 
-    public Order(string titleOfOrder, string orderDescription, int price, string dateOfOrder)
+    public Order(string titleOfOrder, string orderDescription, double price, string dateOfOrder)
     {
       Title = titleOfOrder;
       Description = orderDescription;
