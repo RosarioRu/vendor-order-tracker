@@ -29,6 +29,12 @@ namespace BakeryTracker.Models
       _instancesOfOrders.Clear();
     }
 
+    //method to find instance of Order based on searched for OrderID
+    public static Order FindOrder(int orderId)
+    {
+      return _instancesOfOrders[orderId-1];
+    }
+
 
 //class should include properties for the title, the description, the price, the date, and any other properties you would like to include.
   }
