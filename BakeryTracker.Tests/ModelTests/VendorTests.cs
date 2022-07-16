@@ -60,7 +60,7 @@ namespace BakeryTracker.Tests
       //Act
       List<Vendor> listGetAllMethodMakes = Vendor.GetAll(); //I'll need to add GetAll() method in Vendor.cs file for this to work!
       //Assert
-      Assert.AreEqual(listWeAddVendorsToManually, listGetAllMethodMakes);
+      CollectionAssert.AreEqual(listWeAddVendorsToManually, listGetAllMethodMakes);
     }
 
   }
