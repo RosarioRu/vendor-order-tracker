@@ -18,7 +18,18 @@ namespace BakeryTracker.Tests
     {
       Vendor newVendor = new Vendor("Rosie's Cafe", "Coffee shop downtown, typically requests muffins.");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
-      Assert.AreEqual("Rosie's Cafe", newVendor.Name);     
+    }
+
+    [TestMethod]
+    public void RetrieveName_ReturnVendorName_string()
+    {
+      //Arrange
+      string name = "John's Pancake House";
+      Vendor newVendor = new Vendor(name, "a description here.");
+      //Act
+      string result = newVendor.Name;
+      //Assert
+      Assert.AreEqual(name, result);
     }
 
   }
