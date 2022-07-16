@@ -18,5 +18,13 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
+    [TestMethod]
+    public void RetrieveTitle_ReturnOrderTitle_String()
+    {
+      string orderTitle = "Wedding Order";
+      Order newOrder = new Order(orderTitle, "Cake and cupcake order for the Hawkin's wedding", 112.25, "12/12/2021");
+      Assert.AreEqual(orderTitle, newOrder.Title);
+    }
+
   }
 }
