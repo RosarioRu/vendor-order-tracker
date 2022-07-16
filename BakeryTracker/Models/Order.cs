@@ -23,6 +23,11 @@ namespace BakeryTracker.Models
       OrderId = _instancesOfOrders.Count;
     }
 
+    //method to clear the list of orders called _instancesOfOrders
+    public static void EmptyOrderList()
+    {
+      _instancesOfOrders.Clear();
+    }
 
 
 //class should include properties for the title, the description, the price, the date, and any other properties you would like to include.
