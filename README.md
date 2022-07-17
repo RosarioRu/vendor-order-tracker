@@ -33,7 +33,7 @@ _MSTest was used to unit test the Models. RESTful routing conventions were used 
 
 ## Known Bugs
 
-* _No known bugs but this project has a lot of room for further development._
+* _The ordered lists of orders on the Vendor Details page is not formatting correctly -- the numbers which number the <li>s are left-aligned while the actual <li> are centered._
 
 ## License
 
