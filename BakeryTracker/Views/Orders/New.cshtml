@@ -11,7 +11,8 @@
 
   <h3>Create a new Order for @Model.Name</h3>
   <p>Please submit form below to add a new order for this vendor</p>
-  <form action="/vendors/{id}" method="post">
+  <form action="/vendors/@Model.VendorId/orders" method="post">
+    <input id="vendorId" name="vendorId" type="hidden" value="@Model.VendorId">
     <label for="titleOfOrder">Name for this order</label>
     <input id="titleOfOrder" name="titleOfOrder" type="text"> 
     <label for="description">Order Description</label>
