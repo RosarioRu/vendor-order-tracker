@@ -9,7 +9,7 @@
     @using BakeryTracker.Models;
 
     <h3>Vendor details</h3>
-    <p>Name: @Model["vendor"].Name</p>
+    <p>Name: <strong>@Model["vendor"].Name</strong></p>
     <p>Orders: </p>
     
     @if (@Model["orders"].Count == 0)
