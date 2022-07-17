@@ -40,6 +40,15 @@ namespace BakeryTracker.Controllers
       return View(model);
     }
 
+    [HttpPost("/vendors/{id}")]
+    public ActionResult Show(int id, string titleOfOrder, string description, double price, string date)
+    {
+      Order newOrder = new Order(titleOfOrder, description, price, date);
+      Vendor selectedVendor = Vendor.FindVendor(id);
+      List<Order> ordersForThisVendor = selectedVendor.VendorOrders;
+      return View(ordersForThisVendor);
+    }
+
     
 
   }
