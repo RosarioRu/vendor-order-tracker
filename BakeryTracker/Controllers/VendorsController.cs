@@ -25,7 +25,7 @@ namespace BakeryTracker.Controllers
     public ActionResult Create(string vendorName, string description)
     {
       Vendor newVendor = new Vendor(vendorName, description);
-      // return RedirectToAction("Index", "Home");
+      // return RedirectToAction("Index", "Home"); leaving this comment here so I can show how I would have it route to splaspage!
       return RedirectToAction("Index");
     }
 
