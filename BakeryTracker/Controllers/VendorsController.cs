@@ -29,5 +29,12 @@ namespace BakeryTracker.Controllers
       return RedirectToAction("Index");
     }
 
+    [HttpGet("/vendors/{id}")]
+    public ActionResult Show(int id)
+    {
+      return View();
+    }
+
+
   }
 }
