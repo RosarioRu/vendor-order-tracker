@@ -32,9 +32,19 @@ namespace BakeryTracker.Controllers
     [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
-      return View();
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor selectedVendor = Vendor.FindVendor(id);
+      List<Order> ordersForThisVendor = selectedVendor.VendorOrders;
+      model.Add("vendor", selectedVendor);
+      model.Add("orders", ordersForThisVendor);
+      return View(model);
     }
 
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New()
+    {
+      return RedirectToAction("New", "Orders");
+    }
 
   }
 }
