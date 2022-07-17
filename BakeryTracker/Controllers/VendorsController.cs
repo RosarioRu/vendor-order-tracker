@@ -15,7 +15,7 @@ namespace BakeryTracker.Controllers
       return View(allVendors); 
     }
 
-    [HttpPost("/vendors/new")]
+    [HttpGet("/vendors/new")]
     public ActionResult New()
     {
       return View();
