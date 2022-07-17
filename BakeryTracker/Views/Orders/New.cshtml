@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>New Order Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+  <h3>Create a new Order</h3>
+  <p>Please submit form below to add a new order for this vendor</p>
+  <form action="/orders" method="post">
+    <label for="titleOfOrder">Name for this order</label>
+    <input id="titleOfOrder" name="titleOfOrder" type="text"> 
+    <label for="description">Order Description</label>
+    <input id="description" name="description" type="text">
+    <label for="price">Total Cost</label>
+    <input id="price" name="price" type="double">
+    <label for="date">Order date</label>
+    <input id="date" name="date" type="text">
+    <button type="submit" class="btn btn-light">Add Order</button>
+  </form>
+
+</body>
+</html>
