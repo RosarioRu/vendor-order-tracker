@@ -1,3 +1,7 @@
-Body {
-  background-color: light rgba(235, 226, 214, 0.88);
+body {
+  background-image: linear-gradient(to right, rgb(183, 182, 171), rgb(251, 251, 246));
+  /* background-color:rgb(251, 251, 246); */
+  margin: 10%;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
