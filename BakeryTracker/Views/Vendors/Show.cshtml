@@ -10,15 +10,22 @@
 
     <h3>Vendor details</h3>
     <p>Name: @Model["vendor"].Name</p>
+    <p>Orders: </p>
     
-    
-      
+    @if (@Model["orders"].Count == 0)
+    {
+      <p>There are no orders for this vendor yet.</p>
+    }
+    <ol>
+      @foreach (Order order in @Model["orders"])
+    {
+      <li>@order.Title</li>
+    }
+    </ol>
 
+    <p><a href="/vendors/@Model["vendor"].VendorId/orders/new">Add a new order for this vendor</a></p>
 
-
-
-   
-    <p><a href='/vendors'>Return to Vendor list</a></p>
+    <br><p><a href='/vendors'>Return to Vendor list</a></p>
     
   </body>
 </html>
