@@ -82,10 +82,11 @@ namespace BakeryTracker.Tests
       Order newOrder = new Order("new order title", "new order description", 100, "03/24/2022");
       List<Order> manuallyMadeList = new List<Order> {newOrder};
       Vendor newVendor = new Vendor("Lulu Tea and Treats", "Tea shop in downtown Seattle.");
-      //Act
       newVendor.AddOrder(newOrder);
+      //Act
+      List<Order> listAddOrderMethodCreates = newVendor.VendorOrders;
       //Assert
-      CollectionAssert.AreEqual(manuallyMadeList, newVendor.VendorOrders);
+      CollectionAssert.AreEqual(manuallyMadeList, listAddOrderMethodCreates);
     }
 
   }
