@@ -6,7 +6,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-  <h3>Create a new Order</h3>
+  
+  @using BakeryTracker.Models;
+
+  <h3>Create a new Order for @Model.Name</h3>
   <p>Please submit form below to add a new order for this vendor</p>
   <form action="/orders" method="post">
     <label for="titleOfOrder">Name for this order</label>

@@ -8,9 +8,12 @@ namespace BakeryTracker.Controllers
   public class OrdersController : Controller
   {
     [HttpGet("/vendors/{vendorId}/orders/new")]
-    public ActionResult New()
+    public ActionResult New( int vendorId)
     {
-      return View();
+      Vendor selectedVendor = Vendor.FindVendor(vendorId);
+      return View(selectedVendor);
     }
+
+
   }
 }
