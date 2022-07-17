@@ -5,7 +5,7 @@ using BakeryTracker.Models;
 
 namespace BakeryTracker.Controllers
 {
-  public class VendorController : Controller
+  public class VendorsController : Controller
   {
 
     [HttpGet("/vendors")]
